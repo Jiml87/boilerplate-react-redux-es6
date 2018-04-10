@@ -1,0 +1,215 @@
+.select_wr {
+  width: 100%;
+  // & > .dropdown-toggle {
+  //   box-shadow: 0 0 10px 0 rgba(26, 25, 25, 0.1);
+  //   &:hover, &:active, &:focus {
+  //     box-shadow: 0 0 10px 0 rgba(26, 25, 25, 0.1) !important;
+  //   }
+  // }
+}
+.dropdown-wrap {
+  & .btn-secondary:not([disabled]):not(.disabled):active, .btn-secondary:not([disabled]):not(.disabled).active, .show > .btn-secondary.dropdown-toggle {
+    color:#000;
+    border: 1px solid #dddddd;
+    background-color: #F5F5F5 !important;
+    box-shadow: 0 0 10px 0 rgba(26,25,25,0.1);
+
+    &:hover {
+      background-color: #F5F5F5 !important;
+    }
+  }
+}
+.DropdownBST {
+    box-shadow: 0 2px 8px 0 rgba(0,0,0,0.15);
+  & .btn.btn_cancel {
+      margin-left: 15px;
+      width: 135px;
+      height: 39px;
+  }
+  & .btn.btn-bg-black {
+      margin-left: 0;
+      width: 135px;
+      height: 39px;
+  }
+
+}
+.select_drop_btn.btn {
+  position: relative;
+  border: 1px solid #dddddd;
+  background-color: #F5F5F5;
+  height: 30px;
+  width: 100%;
+  font-size: 14px;
+  line-height: 16px;
+  text-align: left;
+  padding-bottom: 0;
+  padding-top: 0;
+  &:hover, &:not([disabled]):not(.disabled):active, &:focus {
+    border: solid 1px #dddddd !important;
+    color: #000 !important;
+    background: #F5F5F5 !important;
+  }
+  &:after {
+    position: absolute;
+    top: 50%;
+    right: 15px;
+    margin-top: -2px;
+    width: 0;
+    height: 0;
+    border: 4px solid transparent;
+    border-top: 4px solid #1A1919;
+  }
+}
+.not_select_wr>.DropdownBST{
+  width: 377px;
+  padding: 15px 15px 20px 15px;
+}
+.select_wr>.DropdownBST{
+  width: 100%;
+  max-height: 200px;
+  top: -1px !important;
+  padding: 0;
+  margin: 0;
+  background-color: #F5F5F5;
+  border-top: 1px solid #F5F5F5;
+  overflow: hidden;
+  overflow-y: auto;
+
+  & ul,
+  & ul li {
+    padding: 0;
+    margin: 0;
+  }
+
+  & ul button, .btn.btn-secondary  {
+    display: block;
+    width: 100%;
+    padding: 5px 10px;
+    background-color: transparent;
+    border: none;
+    outline: none;
+    text-align: left;
+    font-family: Avenir, sans-serif;
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 16px;
+    // text-transform: uppercase;
+
+    &:hover {
+      background-color: rgba(0, 0, 0, .04) !important;
+    }
+  }
+}
+.select_wr>.dropDownSubTitle{
+  margin: 0 0 15px 0;
+}
+
+.select_placeholder {
+  max-width: calc(100% - 20px);
+  overflow: hidden;
+  opacity: 0.3;
+  font-weight: 500;
+}
+.select_value {
+  display: block;
+  max-width: calc(100% - 20px);
+  overflow: hidden;
+  font-weight: 500;
+  // text-transform: uppercase;
+}
+.dropdown-menu {
+  border-color: #E2E2E2;
+}
+.not_select_wr.show .btn:hover > .tooltip_wraper{
+  display: none;
+}
+
+.select_wr.black-dropdown {
+  width: auto;
+
+  & .btn.select_drop_btn.dropdown-toggle {
+    width: 150px;
+    height: auto;
+    padding: 10px 15px 11px 15px;
+    background-color: #1A1919;
+    color: #fff !important;
+    font-size: 16px;
+    line-height: 18px;
+    cursor: pointer;
+    border: 1px solid #000;
+    outline: none !important;
+    box-shadow: none;
+
+    &:after {
+      border-top: 4px solid #fff;
+    }
+
+    &:hover,
+    &:active,
+    &:focus {
+      border: 1px solid #000 !important;
+      background-color: #1A1919 !important;
+      outline: none !important;
+    }
+
+    & .select_value {
+      text-transform: capitalize;
+    }
+  }
+
+  & .dropdown-menu {
+    top: 0 !important;
+    width: 100%;
+    padding-top: 10px;
+    background-color: transparent;
+    border: none;
+    color: #fff;
+    overflow: hidden;
+    box-sizing: border-box;
+    box-shadow: none;
+
+    &:before {
+      position: absolute;
+      top: 0;
+      left: 50%;
+      margin-left: -5px;
+      display: block;
+      content: '';
+      border: 5px solid transparent;
+      border-bottom: 5px solid #1A1919;
+    }
+
+    & > ul {
+      padding: 5px 0;
+      background-color: #1A1919;
+      box-shadow: 0 2px 8px 0 rgba(0, 0, 0, 0.15);
+
+      & button.btn {
+        display: block !important;
+        width: 100%;
+        padding: 5px 15px 6px 15px;
+        background-color: #1A1919;
+        color: #FFFFFF;
+        font-size: 16px;
+        font-weight: 500;
+        line-height: 18px;
+        text-transform: capitalize;
+        cursor: pointer;
+        outline: none !important;
+        box-shadow: none;
+
+        &:hover,
+        &:active,
+        &:focus {
+          border: none !important;
+          background-color: #454545 !important;
+          outline: none !important;
+        }
+
+        &:not([disabled]):not(.disabled):active:hover {
+          background-color: #454545 !important;
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,426 @@
+
+@include placeholder();
+
+html, body, #app {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  font-family: Avenir, sans-serif;
+  box-sizing: border-box;
+  overflow: auto;
+  -webkit-text-size-adjust: none;
+  color: #000;
+  font-size: 14px;
+}
+
+body {
+  width: auto;
+  min-width: 768px;
+  background-color: #F5F5F5;
+  letter-spacing: 0;
+}
+.app-wrap {
+  // height: 100%;
+  // overflow-y: scroll;
+  height: 100%;
+  overflow-y: auto;
+  padding-top: 39px;
+}
+
+label {
+  font-family: Avenir, sans-serif;
+  font-size: 12px;
+}
+
+input, button {
+  border-radius: 0;
+}
+ul {
+  padding-left: 0;
+  text-align: left;
+}
+li {
+  list-style: none;
+  font-size: 12px;
+  font-weight: 300;
+}
+button {
+  font-size: 12px;
+  font-weight: 300;
+  &:focus {
+    outline: none;
+  }
+}
+input,
+textarea,
+select,
+button {
+  font-family: Avenir, sans-serif;
+}
+input[type=text] {
+  color: #000;
+  // -webkit-text-fill-color: #000;
+}
+p , .p {
+  color: #000;
+  font-family: Avenir, sans-serif;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 24px;
+}
+
+.checkbox[type='checkbox'] {
+  display: none;
+
+  & + label {
+    position: relative;
+    padding-left: 20px;
+    font-size: 14px;
+
+    &:before {
+      position: absolute;
+      left: 5px;
+      top: 50%;
+      margin-top: -6px;
+      display: block;
+      content: '';
+      width: 12px;
+      height: 12px;
+      border: 2px solid #000;
+      background: #000;
+      box-sizing: border-box;
+    }
+
+    &:hover {
+      cursor: pointer;
+    }
+  }
+
+  &:checked + label:before {
+    background: #FFDC19;
+  }
+}
+
+.block{
+  display: block;
+}
+
+.relative {
+  position: relative;
+}
+
+.hidden {
+  display: none !important;
+}
+
+.error-message {
+  font-size: 12px;
+  color: $red;
+}
+
+.uppercase {
+  text-transform: uppercase;
+}
+
+.no-padding {
+  padding: 0 !important;
+}
+
+sub, sup {
+  position: relative;
+  font-size: 75%;
+  line-height: 0;
+  vertical-align: baseline;
+}
+
+sup {
+  top: -.5em;
+}
+.error_msg_glob{
+  color: $red;
+  font-size: 14px;
+}
+.notification-dismiss{
+  background: transparent !important;
+}
+.notification-success .notification-message{
+  color: #fff;
+}
+.notification-info {
+  background-color: #000 !important;
+  border-top: none !important;
+
+  & .notification-dismiss {
+    display: none;
+  }
+
+  & .notification-message {
+    color: #fff;
+
+    &:before {
+      display: none;
+    }
+
+    & .loading-spinner {
+      position: relative;
+      top: 5px;
+      margin-right: 10px;
+    }
+  }
+}
+
+.no-default-styles,
+.no-default-styles:hover,
+.no-default-styles:focus,
+.no-default-styles:active {
+  padding: 0;
+  margin: 0;
+  border: 0;
+  background: none;
+  outline: none;
+}
+
+.margin-none {
+  margin: 0 !important;
+}
+
+.padding-none {
+  padding: 0 !important;
+}
+
+header.content-header {
+  position: relative;
+  background: #FFDC19;
+  padding: 43px 15px 0 15px;
+  min-height: 98px;
+  & h2 {
+    padding: 0;
+    padding-right: 100px;
+    padding-bottom: 15px;
+  }
+
+  & p, .p {
+    margin: 0;
+    padding-bottom: 15px;
+  }
+
+  & .btns-container {
+    position: absolute;
+    right: 15px;
+    bottom: 15px;
+  }
+}
+
+section.content-body {
+  padding: 15px 0 30px 0;
+}
+.content-footer {
+  padding: 15px;
+}
+.red_cl {
+  color: $red;
+}
+.car_img {
+    max-height: 24px;
+}
+
+body .tooltip {
+  display: none;
+  opacity: 1;
+  position: absolute;
+  padding: 6px 10px;
+  background-color: #fff;
+  border: 1px solid #E2E2E2;
+  box-shadow: 0 0 10px 0 rgba(26,25,25,0.1);
+  color: #000000;
+  font: 600 10px/10px 'Avenir';
+  text-align: center;
+  white-space: nowrap;
+  line-break: initial;
+  text-transform: uppercase;
+  z-index: 9;
+  &:before {
+    display: block;
+    content: '';
+    position: absolute;
+    border-top: 1px solid #E2E2E2;
+    border-right: 1px solid #E2E2E2;
+    width: 10px;
+    height: 10px;
+    background-color: #fff;
+  }
+  &.bottom {
+    top: calc(100% + 5px);
+    right: 0;
+    left: initial;
+    &:before {
+      top: -5px;
+      right: 10px;
+      transform: rotate(-45deg);
+    }
+  }
+
+  &.top {
+    bottom: calc(100% + 5px);
+    right: 0;
+    left: initial;
+    &:before {
+      bottom: -6px;
+      right: 50%;
+      margin-left: -5px;
+      transform: rotate(135deg);
+    }
+  }
+}
+
+a:hover > .tooltip,
+button:hover > .tooltip {
+  display: block;
+}
+
+svg {
+  border: none;
+  &:active, &:focus {
+    outline: 0;
+  }
+}
+button > svg, a > svg {
+  pointer-events: none;
+}
+
+.page-content {
+  position: relative;
+  overflow-x: hidden;
+  min-height: 100%;
+}
+svg.ic_delete .cap {
+  transform: rotate(0deg);
+  transform-origin: 19px 6px;
+  transition: transform 0.4s cubic-bezier(.33, 1.78, .52, .47);
+}
+.btn-group.show .btn:not([disabled]) svg.ic_delete .cap {
+    transform: rotate(80deg);
+}
+.bg_yel {
+  background: $mainCl;
+}
+.bg_green {
+  background: $green;
+}
+.bg_red {
+  background: $red;
+}
+.version_plugin {
+    color: #9B9B9B;
+    text-transform: uppercase;
+    font-size: 10px;
+    line-height: 11px;
+    font-weight: 500;
+    padding: 0 15px;
+    position: absolute;
+    bottom: 10px;
+    left: 0;
+    & > div {
+      margin-top: 3px;
+    }
+}
+.content-header {
+  & .menu_adding_wr {
+    & .dropdown-menu {
+      transform: translate3d(0, 0, 0) !important;
+      left: auto !important;
+      top: 49px !important;
+      right: 5px;
+      min-width: 105px;
+      margin-top: 0;
+      box-shadow: 0 2px 8px 0 rgba(0,0,0,0.15);
+      &:before {
+          content: '';
+          display: block;
+          position: absolute;
+          background: #fff;
+          width: 8px;
+          height: 8px;
+          border-left: solid 1px #E2E2E2;
+          border-bottom: solid 1px #E2E2E2;
+          transform: rotate(135deg);
+          right: 10px;
+          top: -5px;
+          margin-left: 0;
+          z-index: 1;
+      }
+    }
+  }
+}
+.icon_plus {
+  width: 14px;
+  height: 14px;
+  position: relative;
+  margin-left: 13px;
+  top: -1px;
+  &:before, &:after {
+    content: '';
+    position: absolute;
+    background: #fff;
+    display: block;
+  }
+  &:before {
+    width: 2px;
+    left: 50%;
+    margin-left: -1px;
+    top: 0;
+    bottom: 0;
+  }
+  &:after {
+    left: 0;
+    right: 0;
+    margin-top: -1px;
+    height: 2px;
+    top: 50%;
+  }
+}
+div:focus {
+  outline: none;
+}
+
+.input_dash_wraper {
+    position: relative;
+    overflow: hidden;
+    &:before {
+        content: attr(data-value);
+        display: block;
+        border-top: dashed 1px #000;
+        height: 1px;
+        overflow: hidden;
+        left: 0;
+        bottom: 0;
+        position: absolute;
+    }
+    &.before-right:before {
+      left: initial;
+      right: 0;
+    }
+    & .input_dashed {
+        border: none;
+        background: transparent;
+        width: 100%;
+        outline: none;
+        padding: 0;
+        font-family: Avenir, sans-serif;
+    }
+    & {
+        @include placeholder($size: 14px, $lheight: 16px);
+    }  
+}
+.car_card {
+    height: 20px;
+    width: 85px;
+}
+.car_image {
+    height: 20px;
+    width: 85px;
+    background-repeat: no-repeat;
+    background-position: left center;
+    background-size: contain;
+}

@@ -1,0 +1,57 @@
+.zz-btn {
+  box-sizing: border-box;
+  outline: none;
+  margin: 0;
+  font-family: 'Avenir';
+  color: white;
+  text-align: center;
+  background: transparent;
+  border: solid 1px #464646;
+  white-space: nowrap;
+
+  & img {
+    position: relative;
+    width: 14px;
+    top: 3px;
+    left: -5px;
+    margin-right: 5px;
+    margin-top: -3px;
+  }
+
+  &.sm {
+    height: 25px;
+    padding: 5px 20px;
+    font-size: 11.5px;
+    line-height: 13px;
+  }
+
+  &.md {
+    min-width: 107px;
+    height: 32px;
+    padding: 7px 10px;
+    font-size: 12px;
+    line-height: 1.42857143;
+  }
+}
+
+.zz-btn:hover,
+.zz-btn:focus {
+  border-color: #87888a;
+  cursor: pointer;
+}
+
+.zz-btn:active {
+  border-color: #96b200;
+}
+
+@media only screen and (max-width: 767px) {
+  .zz-btn {
+    border-color: #646464;
+    height: auto;
+    padding: 13px;
+    box-sizing: border-box;
+    text-transform: inherit;
+    font-size: 14px;
+    line-height: 16px;
+  }
+}

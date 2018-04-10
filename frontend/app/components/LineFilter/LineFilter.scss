@@ -1,0 +1,56 @@
+.manage_filter {
+    padding: 16px  0 0 0;
+    & .btn_filter_wr .btn.btn-secondary {
+        background: transparent;
+        font-size: 10px;
+        font-weight: 600;
+        line-height: 10px;
+        height: 30px;
+        min-width: 100px;
+        border: 1px solid #DDDDDD;
+        &:active, &:hover {
+            background: transparent;
+            color: #000 !important;
+            border: 1px solid #DDDDDD !important;
+        }
+        &.actived {
+            font-weight: 600;
+            background: #000;
+            color: #fff;
+            border: 1px solid #000;
+            &:not([disabled]):not(.disabled):active, &:focus, &:not([disabled]):not(.disabled):hover {
+                background: #000 !important;
+                color: #fff !important;
+                border: 1px solid #000 !important;
+            }
+            //  &:not([disabled]):not(.disabled):hover
+        }
+    }
+    & .indicator {
+        display: inline-block;
+        height: 6px;
+        width: 6px;
+        border-radius: 50%;
+        margin-right: 5px;
+    }
+    & .label_wr {
+        height: 20px;
+        color: $dkGray;
+        line-height: 10px;
+        font-size: 10px;
+        font-weight: 600;
+        text-transform: uppercase;
+        // & a {
+        //     position: relative;
+        //     top: 2px;
+        //     display: inline-block;
+        //     padding: 0 5px;
+        //     & svg {
+        //         fill: $dkGray;
+        //     }
+        //     &:hover svg, &:active svg {
+        //         fill: #000;
+        //     }
+        // }
+    }
+}

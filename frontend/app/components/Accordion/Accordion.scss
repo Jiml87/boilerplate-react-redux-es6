@@ -1,0 +1,40 @@
+.accordion {
+  background-color: #fff;
+  overflow: hidden;
+  margin-bottom: 20px;
+  box-shadow: 0 2px 8px 0 rgba(0,0,0,0.15);
+
+  & .head {
+    position: relative;
+    padding: 20px 20px 20px 55px;
+
+    & h3 {
+      color: #000000;
+      font-family: Avenir, sans-serif;
+      font-size: 20px;
+      font-weight: 600;
+      line-height: 20px;
+    }
+
+    & .carret {
+      position: absolute;
+      top: 18px;
+      left: 17px;
+      z-index: 2;
+      cursor: pointer;
+    }
+
+    & .carret svg {
+      fill: #000;
+      stroke: #000;
+    }
+  }
+
+  & .body {
+    display: none;
+  }
+
+  &.open .body {
+    display: block;
+  }
+}

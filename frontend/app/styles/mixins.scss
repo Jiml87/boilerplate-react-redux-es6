@@ -1,0 +1,31 @@
+@mixin placeholder($size: 10px, $lheight: 13px, $feight: 500, $color: rgba(0, 0, 0, .3)) {
+    ::-webkit-input-placeholder {
+        color: $color !important;
+        font-family: "Avenir";
+        font-size: $size;
+        line-height: $lheight;
+        font-weight: $feight;
+    }
+    ::-moz-placeholder {
+        color: $color !important;
+        font-family: "Avenir";
+        font-size: $size;
+        line-height: $lheight;
+        font-weight: $feight;
+    }
+    ::-ms-input-placeholder {
+        color: $color !important;
+        font-family: "Avenir";
+        font-size: $size;
+        line-height: $lheight;
+        font-weight: $feight;
+    }
+
+    ::placeholder {
+        color: $color !important;
+        font-family: "Avenir";
+        font-size: $size;
+        line-height: $lheight;
+        font-weight: $feight;
+    }
+}

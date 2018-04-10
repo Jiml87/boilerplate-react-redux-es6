@@ -1,0 +1,18 @@
+.form_input {
+    height: 30px;
+    display: block;
+    width: 100%;
+    border: 1px solid #DDDDDD;
+    background: #F5F5F5;
+    font-size: 10px;
+    box-sizing: border-box;
+    padding: 8px 6px 6px 6px;
+    // text-transform: uppercase;
+    line-height: 16px;
+    font-weight: 500;
+    font-size: 14px;
+    &:focus {
+        outline: none;
+        border-color: #000;
+    }
+}

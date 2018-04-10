@@ -1,0 +1,70 @@
+.notifications-wrapper {
+    // margin-top: 39px;
+    & .notifications-tr {
+        width: 100% !important;
+        top: 39px !important;
+        left: 50% !important;
+        right: auto !important;
+        width: 400px !important;
+        margin-left: -200px !important;
+    }
+    & .notification {
+        width: 480px !important;
+        box-shadow: none !important;
+        right: auto !important;
+        margin-left: auto !important;
+        margin-right: auto !important;
+        font-weight: 400;
+        text-align: center;
+        border-radius: 0 !important;
+        &:first-child {
+            top: 0px !important;
+            margin-top: 0 !important;
+        }
+    }
+    & .notification-error {
+        background: #af0302 !important;
+        color: #fff !important;
+        border-top: none !important;
+    }
+    & .notification-message {
+        &:before {
+            content: '!';
+            display: inline-block;
+            background: #fff;
+            width: 20px;
+            height: 20px;
+            color: #af0302;
+            border-radius: 50%;
+            text-align: center;
+            line-height: 21px;
+            font-size: 14px;
+            margin-right: 7px;
+            font-weight: 600;
+        }
+    }
+    & .notification-success {
+        background: #000 !important;
+        color: #fff !important;
+        border-top: none !important;
+        & .notification-message {
+            &:before {
+                color: #000;
+                transform: rotate(180deg);
+            }
+        }
+    }
+    & .notification-warning {
+        background: rgb(197, 101, 9) !important;
+        color: #fff !important;
+        border-top: none !important;
+        & .notification-message {
+            &:before {
+                color: rgb(197, 101, 9);
+            }
+        }
+    }
+    & .notification-dismiss {
+        font-weight: 300;
+    }
+}
