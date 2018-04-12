@@ -2,7 +2,7 @@ import axios from 'axios'
 import { error as errorAction, removeAll as removeAllNotes } from 'react-notification-system-redux'
 import { debounce } from 'lodash'
 
-import { store } from '../app'
+import { store } from '../index'
 
 const prefix = 'api/'
 const baseURL = `/${prefix}`

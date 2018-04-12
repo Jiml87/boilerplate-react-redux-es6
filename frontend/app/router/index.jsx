@@ -1,31 +1,22 @@
 import React from 'react'
-import PropTypes from 'prop-types'
-import { connect } from 'react-redux'
-import { uniqueId } from 'lodash'
-import { Router, Route } from 'react-router'
+// import PropTypes from 'prop-types'
+import { Route, Switch } from 'react-router'
 
-import Root from '../containers/Root/Root'
 import Home from '../containers/Home/Home'
+import Notice from '../containers/Notice/Notice'
+import Header from '../containers/Header/Header'
+import Whether from '../containers/Whether/Whether'
 
 const Routes = props => (
-    <div style={{ height: '100%', width: '100%' }}>
-        <Router history={props.history} key={uniqueId()}>
-            <Route component={Root} >
-                <Route path="/" component={Home} />
-            </Route>
-        </Router>
+    <div className="app-wrap" >
+        <Header />
+        <Switch>
+            <Route exact path="/" component={Home} />
+            <Route path="/whether" component={Whether} />
+            <Route component={Home} />
+        </Switch>
+        <Notice />
     </div>
 )
 
-Routes.propTypes = {
-    history: PropTypes.object.isRequired, // eslint-disable-line react/forbid-prop-types
-}
-
-export default connect(
-    state => ({
-        
-    }),
-    dispatch => ({
-
-    }),
-)(Routes)
+export default Routes

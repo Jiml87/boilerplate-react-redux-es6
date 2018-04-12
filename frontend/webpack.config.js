@@ -17,9 +17,10 @@ const NODE_TEST = process.env.NODE_TEST === 'true'
 const isDEVELOP = NODE_ENV === 'development'
 const GENERAL_PATH = 'public/'
 const BUILD_FOLDER = 'dist/'
-const PORT = 3001;
+const PROTOCOL = 'https'
 const HOST = process.env.NODE_LOCAL_NETWORK === 'true' ? localIp.address : 'localhost' //localIp.address - for testing mobile devise IN LOCAL NETWORK
-const ROOT_URL = isDEVELOP && !NODE_TEST ? `https://${HOST}:${PORT}/` : '/'
+const PORT = 3001;
+const ROOT_URL = isDEVELOP && !NODE_TEST ? `${PROTOCOL}://${HOST}:${PORT}/` : '/'
 const CURRENT_DIR = __dirname.slice(0, -('frontend'.length))
 
 
@@ -74,7 +75,7 @@ const plugins = [
     new purify({
         basePath: ROOT_URL,
         paths: [
-            resolve(CURRENT_DIR, 'slrc-manager/src/main/public/dist/index.html'),
+            resolve(CURRENT_DIR, 'public'),
         ],
         purifyOptions: {
             minify: !isDEVELOP,
@@ -162,6 +163,7 @@ const config = {
         hot: true,
         inline: true,
         host: HOST,
+        https: true,
         useLocalIp: process.env.LOCAL_NETWORK === 'true', //true - for testing mobile in local network(wi-fi)
         port: PORT,
         publicPath: ROOT_URL + BUILD_FOLDER,
@@ -188,7 +190,7 @@ const mainConfig = Object.assign(
     {
         name: 'main',
         entry: {
-            'bundle.js': ['./app/client.jsx', ...(isDEVELOP && !NODE_TEST ? WEBPACK_UTILS : [])],
+            'bundle.js': ['./app/index.jsx', ...(isDEVELOP && !NODE_TEST ? WEBPACK_UTILS : [])],
         },
         output: {
             filename: 'js/[name]',

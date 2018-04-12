@@ -44,5 +44,6 @@ function* clearError(action) {
 }
 
 export function* authSaga() {
-    yield throttle(500, '*', clearError)
+    // yield throttle(500, '*', clearError)
+    yield console.log('auth')
 }
