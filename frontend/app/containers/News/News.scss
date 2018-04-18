@@ -1,0 +1,19 @@
+#news_wraper {
+    height: 100%;
+    & > .container {
+       min-height: 100%; 
+    }
+    & .section_preview {
+        padding: 40px 0;
+    }
+    & .card {
+        width: 210px;
+        display: block;
+        background: #fff;
+        font-family: 'news', serif;
+        font-weight: 400;
+        & p {
+            font-family: News, serif;
+        }
+    }
+}

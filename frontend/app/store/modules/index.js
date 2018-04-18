@@ -3,11 +3,11 @@ import { all } from 'redux-saga/effects'
 import { routerReducer } from 'react-router-redux'
 import { reducer as notifications } from 'react-notification-system-redux'
 
-import auth, { authSaga } from './auth'
+import news, { newsSaga } from './news'
 
 
 const appReducer = combineReducers({
-    auth,
+    news,
     notifications, // global
     routing: routerReducer, // routing
 })
@@ -18,6 +18,6 @@ export default rootReducer
 
 export function* rootSaga(dispatch) {
     yield all([
-        authSaga(),
+        newsSaga(),
     ])
 }

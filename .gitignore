@@ -1,6 +1,7 @@
 .idea
 node_modules
 frontend/node_modules
+frontend/stats.json
 public
 .vscode
 package-lock.json

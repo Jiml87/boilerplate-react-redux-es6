@@ -8,7 +8,7 @@ import { AppContainer } from 'react-hot-loader'
 
 import 'bootstrap/dist/css/bootstrap.css'
 
-import configureStore, { history } from './redux/configureStore'
+import configureStore, { history } from './store/configureStore'
 import Routes from './router'
 
 // import App from './app'

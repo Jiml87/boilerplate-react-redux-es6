@@ -4,8 +4,8 @@ import { debounce } from 'lodash'
 
 import { store } from '../index'
 
-const prefix = 'api/'
-const baseURL = `/${prefix}`
+const baseURL = ''
+const APIkeyNYT = 'b71b652710f04038a72a5784df8d99c5'
 
 // let store = null //eslint-disable-line
 
@@ -19,15 +19,6 @@ const interceptMainConfig = (config) => {
     config.headers = { ...config.headers } //eslint-disable-line no-param-reassign
     return config;
 }
-
-const notAutorize = debounce((response) => {
-    store.dispatch(errorAction({
-        message: response.data.error.msg,
-        position: 'tr',
-        autoDismiss: 0,
-    }))
-    setTimeout(() => { window.location.reload() }, 1500)
-}, 1500)
 
 const crashServer = debounce((msg) => {
     store.dispatch(removeAllNotes());
@@ -53,12 +44,7 @@ const instances = {
             )
 
             this._main.interceptors.response.use(
-                (response) => {
-                    if (response.status === 200 && response.data.error && response.data.error.id === 'AccessDeniedException')
-                        notAutorize(response)
-
-                    return response
-                },
+                response => response,
                 (error) => {
                     if (error.response)
                         crashServer(`Request failed with status code ${error.response.status}`)
@@ -73,12 +59,11 @@ const instances = {
     },
 }
 
-export const login = (username, password, rememberMe) => instances.main.post(
-    `session/login?login=${username}`,
-    password,
-)
+// export const getNews = option => instances.main.get(
+//     `url`,
+// )
 
-export const checkSession = () => instances.main.get(
-    'session/user',
+export const getNews = option => instances.main.get(
+    `https://api.nytimes.com/svc/topstories/v2/${option}.json?api-key=${APIkeyNYT}`,
 )
 

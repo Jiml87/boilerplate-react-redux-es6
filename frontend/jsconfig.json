@@ -1,0 +1,17 @@
+{
+    "compilerOptions": {
+        "target": "es6",
+        "baseUrl": "./app",
+        "paths": {
+            "api": ["./api"],
+            "assets": ["./assets"],
+            "components": ["./components"],
+            "config": ["./config"],
+            "containers": ["./containers"],
+            "router": ["./router"],
+            "selectors": ["./selectors"],
+            "store/*": ["./store/*"],
+            "styles": ["./styles"]
+        }
+    }
+}

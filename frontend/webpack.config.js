@@ -93,7 +93,18 @@ const config = {
     //watch: isDEVELOP,
     resolve: {
         extensions: ['.js', '.jsx', '.json', '.scss', '.css'],
-        modules: [path.resolve(__dirname, 'app/vendor'), 'node_modules'],
+        modules: ['node_modules'],
+        alias: {
+            api: path.resolve(__dirname, 'app/api'),
+            assets: path.resolve(__dirname, 'app/assets'),
+            components: path.resolve(__dirname, 'app/components'),
+            config: path.resolve(__dirname, 'app/config'),
+            constants: path.resolve(__dirname, 'app/constants'),
+            containers: path.resolve(__dirname, 'app/containers'),
+            router: path.resolve(__dirname, 'app/router'),
+            store: path.resolve(__dirname, 'app/store'),
+            styles: path.resolve(__dirname, 'app/styles'),
+        },
     },
     module: {
         rules: [

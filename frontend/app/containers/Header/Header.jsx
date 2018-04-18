@@ -9,14 +9,16 @@ import NavLink from '../../components/NavLink/NavLink'
 import './Header.scss'
 
 const Header = props => (
-    <header className="page-header d-flex justify-content-between">
-        <Link to="/" className="logo d-flex justify-content-center align-items-center">
-            Logo
-        </Link>
-        <Nav>
-            <NavLink to="/manager" path={props.match} />
-            <NavLink to="/whether" path={props.match} />
-        </Nav>
+    <header className="page-header">
+        <div className="container d-flex justify-content-between">
+            <Link to="/" className="logo d-flex justify-content-center align-items-center">
+                Logo
+            </Link>
+            <Nav>
+                <NavLink to="/" path={props.match} text="Home" />
+                <NavLink to="/news" path={props.match} text="News" />
+            </Nav>
+        </div>
     </header>
 )
 
