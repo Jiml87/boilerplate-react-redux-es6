@@ -6,7 +6,7 @@ const app = express();
 
 app.use(express.static(path.join(__dirname, config.basePath)));
 app.use('*', function (req, res, next) {
-    res.sendFile(path.resolve(__dirname, config.basePath, 'index.html'));
+    res.sendFile(path.resolve(__dirname, config.basePath, 'dist/index.html'));
 });
 
 app.listen(config.port, () => {
